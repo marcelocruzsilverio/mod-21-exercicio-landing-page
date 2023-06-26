@@ -1,5 +1,44 @@
-$bgColor: #1c7fdb;
+@use 'variables';
+@use 'aboutTheMovie';
+@use 'trailers';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variables.$backgrounColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin text($fontSize: 1.2rem) {
+    font-size: $fontSize;
+    color: variables.$mainTextColor;
+}
+
+@mixin title($fontSize: 3.5rem) {
+    font-size: $fontSize;
+    color: variables.$titleTextColor;
+    letter-spacing: .2rem
+}
+
+.text {
+    @include text;
+}
+
+.title {
+    @include title;
+}
+
+.title--medium {
+    @include title(2.5rem)
+}
+
+.container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+
 }
