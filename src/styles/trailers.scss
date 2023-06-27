@@ -1,17 +1,58 @@
 .trailers {
-    margin-top: 128px;
-    margin-bottom: 128px;
-    
+    margin: 128px 0;
+
+    @media (max-width: 768px) {
+        margin: 24px 0;
+    }
+
 
     &__content {
 
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-       
-        
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: 1%;
 
-        &__officialTrailer, &__behindScenes {
+
+        @media (max-width: 768px) {
+            display: block;
+
+        }
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            display: grid;
+            grid-template-columns: 49% 49%;
+            gap: 2%;
+        }
+
+
+
+
+
+        &__officialTrailer,
+        &__behindScenes {
+
+            iframe {
+                width: 460px;
+                height: 415px;
+
+                @media (max-width: 768px) {
+
+                    width: 100%;
+                    height: 300px;
+
+                }
+
+                @media (min-width: 769px) and (max-width: 1023px) {
+                    width: 100%;
+
+                }
+
+                @media (min-width: 1024px) {
+                    width: 100%
+                }
+            }
+
+
 
             h2 {
                 margin-top: 64px;

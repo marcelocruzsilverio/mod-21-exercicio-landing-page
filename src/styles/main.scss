@@ -12,10 +12,21 @@
     list-style: none;
 }
 
+.container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+}
+
 body {
     background-color: variables.$backgrounColor;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 @mixin text($fontSize: 1.2rem) {
@@ -31,30 +42,58 @@ body {
 
 .text {
     @include text;
+
+    @media (max-width: 768px) {
+        @include text(1rem)
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+        @include text(1.5rem)
+    }
+
+
 }
 
 .title {
     @include title;
+
+    @media (max-width: 768px) {
+        @include title(2.5rem);
+        text-align: center;
+    }
 }
 
 .title--medium {
-    @include title(2.5rem)
+    @include title(2.5rem);
+
+    @media (max-width: 768px) {
+        @include title(2rem)
+    }
 }
 
-.container {
-    max-width: 80%;
-    width: 100%;
-    margin: 0 auto;
 
-}
 
 .custom-carousel {
     width: 50%;
-    margin: 0 auto; /* Isso centralizará o carrossel na tela */
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+        width: 70%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 80%;
+    }
 }
 
 .carousel-caption {
     color: #000;
-}
 
- 
+    @media (max-width: 768px) {
+        color: #fff;
+    }
+}
