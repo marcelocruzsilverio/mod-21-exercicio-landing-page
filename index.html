@@ -16,8 +16,29 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__content container">
+
+            <img class="header__content__logo" src="./dist/images/logo-removebg-preview.png" alt="" />
+
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <button><a class="text" href="#about">Sobre o filme</a></button>
+                </li>
+                <li class="header__links__item">
+                    <button><a class="text" href="#trailer">Trailers</a></button>
+                </li>
+                <li class="header__links__item">
+                    <button><a class="text" href="#curiosity">Curiosidades</a></button>
+                </li>
+                <li class="header__links__item">
+                    <button><a class="text" href="#questions">FAQ</a></button>
+                </li>
+            </ul>
+        </div>
+    </header>
     <div class="container">
-        <section class="aboutTheMovie">
+        <section id="about" class="aboutTheMovie">
             <div class="aboutTheMovie__content">
                 <div class="aboutTheMovie__content__image">
                     <img src="./dist/images/Top-Gun-Maverick-2.jpg" alt="Baner filme top gun maverick 2">
@@ -37,7 +58,7 @@
                         talentos, mostrando-lhes o verdadeiro significado de coragem, sacrifício e trabalho em equipe.
                     </p>
                     <p class="text">
-                        Em "Top Gun: Maverick 2", a adrenalina dos voos de caça, as sequências aéreas impressionantes e
+                        A adrenalina dos voos de caça, as sequências aéreas impressionantes e
                         a trilha sonora marcante se combinam para oferecer uma experiência cinematográfica emocionante e
                         empolgante. À medida que Maverick e sua equipe enfrentam desafios inéditos, eles precisam provar
                         seu valor, superar seus medos e deixar um legado duradouro na aviação naval.
@@ -47,7 +68,7 @@
             </div>
 
         </section>
-        <section class="trailers">
+        <section id="trailer" class="trailers">
             <div class="trailers__content">
                 <div class="trailers__content__officialTrailer">
                     <h2 class="title--medium">Trailer Oficial</h2>
@@ -73,10 +94,10 @@
                 </div>
             </div>
         </section>
-        <section class="curiosities">
+        <section id="curiosity" class="curiosities">
             <h2 class="title--medium">Curiosidades</h2>
-            <p class="text">Antes e depois de atores dos filmes Top Gun e Top Gun Maverick!</p>
-            <div class="carousel slide custom-carousel" id="carousel">
+            <h3 class="text"> Veja o Antes/depois de alguns atores de ambos os filmes!</h3>
+            <div class="carousel slide custom-carousel" data-bs-ride="carousel" id="carousel">
                 <div class="carousel-inner justify-content-center align-item-center">
                     <div class="carousel-item active" data-bs-interval="5000">
                         <img class="d-block w-100"
@@ -179,8 +200,8 @@
                 </div>
             </div>
         </section>
-        <section class="faq">
-            <h2 class="title--medium">Perguntas Frequentes</h2>
+        <section id="questions" class="faq">
+            <h2 class="title--medium">As Pessoas Perguntam</h2>
             <ul class="faq__questions">
                 <li class="faq__questions__item">
                     <div class="faq__questions__item__question" data-faq-question>
